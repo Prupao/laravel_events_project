@@ -19,6 +19,8 @@ Route::post('/events',[EventController::class, 'store']);
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 
+Route::delete('/events/{id}', [EventController::class, 'destroy']);
+
 /*Route::get('/produtos/{id}',function($id){
     return view('product',['id' => $id ]);
 });*/
@@ -34,5 +36,3 @@ Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('aut
 });
 
 */
-
-
